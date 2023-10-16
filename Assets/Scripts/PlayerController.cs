@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
+//using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -29,8 +29,7 @@ public class PlayerController : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.Space) && isOnGround && !gameOver) {
+    { if (Input.GetKeyDown(KeyCode.Space) && isOnGround && !gameOver) {
             playerRb.AddForce(Vector3.up * jumpForce, ForceMode.Impulse);
         isOnGround= false;
             playerAnim.SetTrigger("Jump_trig");
